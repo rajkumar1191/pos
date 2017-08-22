@@ -1,34 +1,49 @@
 import { Component } from '@angular/core';
 
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, LoadingController } from 'ionic-angular';
 
 import { ItemDetailsPage } from '../item-details/item-details';
-
+import { DbService } from '../animate/animate';
 @Component({
   selector: 'page-list',
   templateUrl: 'list.html'
 })
 export class ListPage {
-  icons: string[];
-  items: Array<{title: string, note: string, icon: string}>;
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
-    'american-football', 'boat', 'bluetooth', 'build'];
-
-    this.items = [];
-    for(let i = 1; i < 11; i++) {
-      this.items.push({
-        title: 'Item ' + i,
-        note: 'This is item #' + i,
-        icon: this.icons[Math.floor(Math.random() * this.icons.length)]
-      });
-    }
+  data:any;
+  shownGroup = null;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public dbService: DbService, public loadingCtrl: LoadingController) {
+   this.getData()
   }
 
-  itemTapped(event, item) {
-    this.navCtrl.push(ItemDetailsPage, {
-      item: item
+  loading = this.loadingCtrl.create({
+    content: 'Loading'
+  });
+  init() {
+      this.loading = this.loadingCtrl.create({
+          content: 'Loading'
+      });
+  }
+  ngOnDestroy() {
+        this.loading.dismiss();
+        }
+  getData() {
+    this.loading.present();
+    this.dbService.getRequestData().then((result) => {
+      this.loading.dismiss();
+      this.data = result;
+    }, (error) => {
+      this.loading.dismiss();
+      console.log("ERROR: ", error);
     });
+  }
+  toggleGroup(group) {
+    if (this.isGroupShown(group)) {
+        this.shownGroup = null;
+    } else {
+        this.shownGroup = group;
+    }
+  }
+  isGroupShown(group) {
+      return this.shownGroup === group;
   }
 }

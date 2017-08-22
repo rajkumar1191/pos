@@ -1,25 +1,55 @@
-<ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Hello Ionic</ion-title>
-  </ion-navbar>
-</ion-header>
-
-
-<ion-content padding>
-
-  <h3>Welcome to your first Ionic app!</h3>
-
-  <p>
-    This starter project is our way of helping you get a functional app running in record time.
-  </p>
-  <p>
-    Follow along on the tutorial section of the Ionic docs!
-  </p>
-  <p>
-    <button ion-button color="primary" menuToggle>Toggle Menu</button>
-  </p>
-
+<ion-content>
+  <ion-card no-padding>
+    <ion-card-header text-center>
+      Contact Us
+    </ion-card-header>
+    <ion-card-content>
+      <form name="contactForm">
+        <ion-item>
+          <ion-label floating>Select District</ion-label>
+          <ion-select [(ngModel)]="district" name="district">
+            <ion-option *ngFor="let item of cityOptions">{{item.name}}</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Sub Locality</ion-label>
+          <ion-input type="text" [(ngModel)]="locality" name="locality"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Dealer Name</ion-label>
+          <ion-input type="text" [(ngModel)]="dname" name="dname"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Dealer Contact Number</ion-label>
+          <ion-input type="number" inputmode="numeric" [(ngModel)]="dno" name="dno"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Contact Name</ion-label>
+          <ion-input type="text" [(ngModel)]="name" name="name"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Email Id</ion-label>
+          <ion-input type="email" [(ngModel)]="email" name="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Mobile Number</ion-label>
+          <ion-input type="number" inputmode="numeric"  [(ngModel)]="mobile" name="mobile" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Address</ion-label>
+          <ion-textarea type="text" [(ngModel)]="address" name="address"></ion-textarea>
+        </ion-item>
+      </form>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
+<ion-footer>
+  <ion-row>
+    <ion-col>
+      <button ion-button round full block (click)="formSubmit()">Submit</button>    
+    </ion-col>
+    <ion-col>
+      <button ion-button round full block (click)="viewRequest()" color="light">View Request</button>    
+    </ion-col>
+  </ion-row>
+</ion-footer>

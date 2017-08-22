@@ -1,3 +1,27 @@
 page-hello-ionic {
-
+    @keyframes animatedBackground {
+        from { background-position: 0 0; }
+        to { background-position: 100% 0; }
+    }
+    @-webkit-keyframes animatedBackground {
+        from { background-position: 0 0; }
+        to { background-position: 100% 0; }
+    }
+    .scroll-content{
+        background-image: url('../assets/img/back.png');
+        background-position: 0px 0px;
+        background-repeat: repeat-x;
+        background-size:cover;
+        -webkit-animation:animatedBackground 20s linear infinite;
+        -moz-animation:animatedBackground 20s linear infinite;
+        -ms-animation:animatedBackground 20s linear infinite;
+        -o-animation:animatedBackground 20s linear infinite;
+        animation:animatedBackground 20s linear infinite;
+    }
+    ion-card{
+        background: rgba(257, 256, 256, 0.9) !important;
+        ion-list{
+            background: rgba(257, 256, 256, 0.8) !important;        
+        }
+    }
 }

@@ -3,18 +3,87 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>My First List</ion-title>
+    <ion-title>My Request</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon name="{{item.icon}}" item-left></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-right>
-        {{item.note}}
-      </div>
-    </button>
-  </ion-list>
+  <ion-card *ngFor="let item of data let i=index"  tappable (click)="toggleGroup(i)">
+    <ion-card-content no-padding>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-row>
+              <ion-col class="head">District</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col class="value">{{item.district}}</ion-col>
+            </ion-row>
+          </ion-col>
+          <ion-col>
+            <ion-row>
+              <ion-col class="head">Locality</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col class="value">{{item.locality}}</ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-row>
+              <ion-col class="head">Dealer Name</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col class="value">{{item.dname}}</ion-col>
+            </ion-row>
+          </ion-col>
+          <ion-col>
+            <ion-row>
+              <ion-col class="head">Contact Name</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col class="value">{{item.cname}}</ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+        <ion-row [hidden]="!isGroupShown(i)">
+          <ion-col>
+            <ion-row>
+              <ion-col class="head">Dealer Number</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col class="value">{{item.dno}}</ion-col>
+            </ion-row>
+          </ion-col>
+          <ion-col>
+            <ion-row>
+              <ion-col class="head">Contact Number</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col class="value">{{item.cno}}</ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+        <ion-row [hidden]="!isGroupShown(i)">
+          <ion-col>
+            <ion-row>
+              <ion-col class="head">Email ID</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col class="value">{{item.emailid}}</ion-col>
+            </ion-row>
+          </ion-col>
+          <ion-col>
+            <ion-row>
+              <ion-col class="head">Address</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col class="value">{{item.address}}</ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

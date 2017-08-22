@@ -1,3 +1,18 @@
 page-list {
-
+    .head{
+        font-weight: 700;
+        font-size: 1.6rem;
+        color: #000;
+    }
+    .value{
+        font-weight: 500;
+        font-size: 1.5rem;
+        color: #488aff        
+    }
+    .card-content{
+        border-bottom: 5px solid #488aff;
+    }
+    .col {
+        padding: 2px;
+    }
 }
