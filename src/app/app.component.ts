@@ -20,7 +20,7 @@ export class MyApp {
   y: any;
   h: any;
   offsetY: any;
-  pages: Array<{ title: string, component: any }>;
+  pages: Array<{ title: string, icon: string, component: any }>;
 
   constructor(
     public platform: Platform,
@@ -30,8 +30,9 @@ export class MyApp {
   ) {
     this.initializeApp();
     this.pages = [
-      { title: 'Contact', component: HelloIonicPage },
-      { title: 'My Request', component: ListPage }
+      { title: 'Checkout', icon: 'cart', component: HelloIonicPage },
+      { title: 'Orders',  icon: 'list-box', component: ListPage },
+      { title: 'Store',  icon: 'home', component: ListPage }
     ];
     if (!this.platform.is('ios') && !this.platform.is('ipad') && !this.platform.is('iphone')) {
       window.addEventListener('native.keyboardshow', this.keyboardShowHandler);

@@ -6,22 +6,26 @@
                 <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
             </button>
         </ion-buttons>
-        <ion-title text-center>Login</ion-title>
+        <ion-title text-center>Add a product</ion-title>
     </ion-toolbar>
 </ion-header>
 <ion-content padding class="background-gradient">
     <form [formGroup]="homeworkForm">
         <ion-list>
             <ion-item no-padding>
-                <ion-label class='label' floating>Email Address</ion-label>
+                <ion-label class='label' floating>Title</ion-label>
                 <ion-input type="email" formControlName="subjectName"></ion-input>
             </ion-item>
             <ion-item no-padding>
                 <ion-label class='label' floating>Password</ion-label>
                 <ion-input type="email" formControlName="subjectName"></ion-input>
             </ion-item>
-            <button type="submit" class="footerBtn right submit" ion-button icon-right full block (click)="navToProduct();">
-                Login
+            <ion-item no-padding>
+                <ion-label class='label' floating>Store Name</ion-label>
+                <ion-input type="email" formControlName="subjectName"></ion-input>
+            </ion-item>
+            <button type="submit" class="footerBtn right submit" ion-button icon-right full block (click)="submitHomework();">
+                Create Store
             </button>
         </ion-list>
     </form>

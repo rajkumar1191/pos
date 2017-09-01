@@ -12,7 +12,11 @@ page-list {
     .card-content{
         border-bottom: 5px solid #488aff;
     }
-    .col {
-        padding: 2px;
+    .col{
+        padding: 1px;
+    }
+    img {
+        padding: 5px;
+        border: 1px solid #ccc;
     }
 }

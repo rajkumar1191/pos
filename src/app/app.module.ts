@@ -15,6 +15,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { EmailComposer } from '@ionic-native/email-composer';
 import { ModalPage } from '../pages/modal/modal';
 import { LoginModalPage } from '../pages/loginModal/loginModal';
+import { QuickSale } from '../pages/QuickSale/quicksale';
+import { AddProduct } from '../pages/AddProduct/addproduct';
+import { AddCustomer } from '../pages/AddCustomer/addcustomer';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { LoginModalPage } from '../pages/loginModal/loginModal';
     ListPage,
     ModalPage,
     LoginModalPage,
-    LaunchPage
+    LaunchPage,
+    QuickSale,
+    AddProduct,
+    AddCustomer
   ],
   imports: [
     BrowserModule,
@@ -43,7 +49,10 @@ import { LoginModalPage } from '../pages/loginModal/loginModal';
     ListPage,
     ModalPage,
     LoginModalPage,
-    LaunchPage
+    LaunchPage,
+    QuickSale,
+    AddProduct,
+    AddCustomer
   ],
   providers: [
     StatusBar,

@@ -9,7 +9,7 @@
       <ion-option>Watches</ion-option>
     </ion-select>
     <ion-buttons end>
-      <button ion-button icon-only>
+      <button ion-button icon-only (click)="actionSheet()">
         <ion-icon name="add"></ion-icon>
       </button>
       <button ion-button icon-only>
@@ -19,42 +19,42 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
-  <button ion-button block color="light">Quick Sale</button>
+  <button ion-button block color="light" (click)="presentActionSheet()">Quick Sale</button>
   <ion-list>
     <ion-item>
       <ion-thumbnail item-start>
         <img src="assets/img/watch1.png">
       </ion-thumbnail>
-      <h2>Cher</h2>
-      <p>Ugh. As if.</p>
+      <h2 text-wrap>A perfect blend of style, comfort & affordable price. They're sure to make those around you go green with envy</h2>
+      <p>39988 in stock</p>
     </ion-item>
     <ion-item>
       <ion-thumbnail item-start>
           <img src="assets/img/watch2.jpg">
       </ion-thumbnail>
-      <h2>Cher</h2>
-      <p>Ugh. As if.</p>
+      <h2 text-wrap>A perfect blend of style, comfort & affordable price. They're sure to make those around you go green with envy</h2>
+      <p>39988 in stock</p>
     </ion-item>
     <ion-item>
       <ion-thumbnail item-start>
           <img src="assets/img/watch3.png">
       </ion-thumbnail>
-      <h2>Cher</h2>
-      <p>Ugh. As if.</p>
+      <h2 text-wrap>A perfect blend of style, comfort & affordable price. They're sure to make those around you go green with envy</h2>
+      <p>39988 in stock</p>
     </ion-item>
     <ion-item>
       <ion-thumbnail item-start>
         <img src="assets/img/sun1.jpg">
       </ion-thumbnail>
-      <h2>Cher</h2>
-      <p>Ugh. As if.</p>
+      <h2 text-wrap>A perfect blend of style, comfort & affordable price. They're sure to make those around you go green with envy</h2>
+      <p>39988 in stock</p>
     </ion-item>
     <ion-item>
       <ion-thumbnail item-start>
         <img src="assets/img/sun2.jpg">
       </ion-thumbnail>
-      <h2>Cher</h2>
-      <p>Ugh. As if.</p>
+      <h2 text-wrap>A perfect blend of style, comfort & affordable price. They're sure to make those around you go green with envy</h2>
+      <p>39988 in stock</p>
     </ion-item>
   </ion-list>
 </ion-content>

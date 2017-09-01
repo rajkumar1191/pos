@@ -7,9 +7,9 @@
   </ion-header>
 
   <ion-content>
-    <ion-list>
-      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
+    <ion-list class="side-menu-list">
+      <button ion-item icon-left no-lines *ngFor="let p of pages" (click)="openPage(p)" class="item-content" >
+        <ion-icon name="{{p.icon}}"></ion-icon> <span class="side-menu-label">{{p.title}}</span>
       </button>
     </ion-list>
   </ion-content>
