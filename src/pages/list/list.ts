@@ -9,7 +9,7 @@ import { LaunchPage } from '../animate/animate';
   templateUrl: 'list.html'
 })
 export class ListPage {
-  data: any;
+  amount: any;
   shownGroup = null;
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public menuCtrl: MenuController) {
     this.menuCtrl.swipeEnable(true);
