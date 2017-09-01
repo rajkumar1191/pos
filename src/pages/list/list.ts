@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, LoadingController, MenuController } from 'ionic-angular';
 
 import { ItemDetailsPage } from '../item-details/item-details';
-import { DbService } from '../animate/animate';
+import { LaunchPage } from '../animate/animate';
 @Component({
   selector: 'page-list',
   templateUrl: 'list.html'

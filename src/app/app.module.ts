@@ -6,7 +6,7 @@ import {  HttpModule } from '@angular/http';
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 import { ItemDetailsPage } from '../pages/item-details/item-details';
 import { ListPage } from '../pages/list/list';
-import { DbService } from '../pages/animate/animate';
+import { LaunchPage } from '../pages/animate/animate';
 import { IonicStorageModule } from '@ionic/storage';
 import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 
@@ -23,7 +23,8 @@ import { LoginModalPage } from '../pages/loginModal/loginModal';
     ItemDetailsPage,
     ListPage,
     ModalPage,
-    LoginModalPage
+    LoginModalPage,
+    LaunchPage
   ],
   imports: [
     BrowserModule,
@@ -41,13 +42,13 @@ import { LoginModalPage } from '../pages/loginModal/loginModal';
     ItemDetailsPage,
     ListPage,
     ModalPage,
-    LoginModalPage
+    LoginModalPage,
+    LaunchPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     EmailComposer,
-    DbService,
     SQLite,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]

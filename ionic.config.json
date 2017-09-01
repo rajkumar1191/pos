@@ -1,6 +1,6 @@
 {
-  "name": "carDeco",
-  "app_id": "",
+  "name": "pos",
+  "app_id": "7bb53504",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
