@@ -13,17 +13,13 @@ import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { EmailComposer } from '@ionic-native/email-composer';
-import { ModalPage } from '../pages/modal/modal';
-import { LoginModalPage } from '../pages/loginModal/loginModal';
 
 @NgModule({
   declarations: [
     MyApp,
     HelloIonicPage,
     ItemDetailsPage,
-    ListPage,
-    ModalPage,
-    LoginModalPage
+    ListPage
   ],
   imports: [
     BrowserModule,
@@ -39,9 +35,7 @@ import { LoginModalPage } from '../pages/loginModal/loginModal';
     MyApp,
     HelloIonicPage,
     ItemDetailsPage,
-    ListPage,
-    ModalPage,
-    LoginModalPage
+    ListPage
   ],
   providers: [
     StatusBar,

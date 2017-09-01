@@ -65,7 +65,7 @@ export class MyApp {
     removeStyles.removeAttribute("style");
 
   }
-
+  
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
