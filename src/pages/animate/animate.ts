@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { NavController, NavParams, LoadingController, MenuController } from 'ionic-angular';
 
-import { ItemDetailsPage } from '../item-details/item-details';
+import { ListPage } from '../list/list';
 
 @Component({
     selector: 'page-animate',
@@ -12,7 +12,9 @@ import { ItemDetailsPage } from '../item-details/item-details';
 
 export class LaunchPage {
 
-    constructor() {
+    constructor(public navCtrl: NavController) {
     }
-  
+    navToList(){
+        this.navCtrl.setRoot(ListPage)
+    }
 }

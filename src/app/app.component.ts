@@ -4,6 +4,7 @@ import { Platform, MenuController, Nav } from 'ionic-angular';
 
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 import { ListPage } from '../pages/list/list';
+import { LaunchPage } from '../pages/animate/animate';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -30,7 +31,7 @@ export class MyApp {
   ) {
     this.initializeApp();
     this.pages = [
-      { title: 'Checkout', icon: 'cart', component: HelloIonicPage },
+      { title: 'Checkout', icon: 'cart', component: LaunchPage },
       { title: 'Orders',  icon: 'list-box', component: ListPage },
       { title: 'Store',  icon: 'home', component: ListPage }
     ];

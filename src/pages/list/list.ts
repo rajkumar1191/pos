@@ -14,6 +14,10 @@ import { LaunchPage } from '../animate/animate';
 export class ListPage {
   amount: any;
   shownGroup = null;
+  total = 0;
+  count = 0;
+  toppings = 'All Products';
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public menuCtrl: MenuController, public actionSheetCtrl: ActionSheetController, public modalCtrl: ModalController) {
     this.menuCtrl.swipeEnable(true);
   }
@@ -24,7 +28,62 @@ export class ListPage {
         console.log("Data =>", data) //This will log the form entered by user in add modal.
     })
   }
-
+  viewChange(toppings){
+    this.toppings = toppings;
+  }
+  addPriceList(){
+    this.total = this.total + 400;
+    this.count = this.count + 1;
+  }
+  showPriceList(){
+    let actionSheet = this.actionSheetCtrl.create({
+      buttons: [
+        {
+          text: 'Model 1',
+          handler: () => {
+            this.total = this.total + 300;
+            this.count = this.count + 1;
+          }
+        },
+        {
+          text: 'Model 2',
+          handler: () => {
+            this.total = this.total + 350;            
+            this.count = this.count + 1;
+          }
+        },
+        {
+          text: 'Model 3',
+          handler: () => {
+            this.total = this.total + 300;            
+            this.count = this.count + 1;
+          }
+        },
+        {
+          text: 'Model 4',
+          handler: () => {
+            this.total = this.total + 200;            
+            this.count = this.count + 1;
+          }
+        },
+        {
+          text: 'Model 5',
+          handler: () => {
+            this.total = this.total + 250;            
+            this.count = this.count + 1;
+          }
+        },
+        {
+          text: 'Model 6',
+          handler: () => {
+            this.total = this.total + 300;            
+            this.count = this.count + 1;
+          }
+        }
+      ]
+    });
+    actionSheet.present();
+  }
   actionSheet(){
     let actionSheet = this.actionSheetCtrl.create({
       buttons: [

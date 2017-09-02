@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, MenuController, AlertController, ToastController, LoadingController } from 'ionic-angular';
-import { ListPage } from '../list/list';
+import { LaunchPage } from '../animate/animate';
 import { ModalController } from 'ionic-angular';
 import { ModalPage } from '../modal/modal';
 import { LoginModalPage } from '../loginModal/loginModal';
@@ -39,13 +39,13 @@ export class HelloIonicPage {
     modal.onDidDismiss(data=>{
         if(data == 'login'){
           this.menuCtrl.swipeEnable(true);    
-          this.navCtrl.setRoot(ListPage);          
+          this.navCtrl.setRoot(LaunchPage);          
         }
         console.log("Data =>", data)
     })
   }
   viewRequest() {
-    this.navCtrl.push(ListPage);
+    this.navCtrl.push(LaunchPage);
   }
 
 }

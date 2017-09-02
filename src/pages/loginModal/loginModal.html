@@ -1,9 +1,9 @@
 <ion-header>
     <ion-toolbar color="header">
         <ion-buttons start>
-            <button ion-button (click)="dismiss()">
+            <button color="theme" ion-button (click)="dismiss()">
                 <span ion-text color="primary" showWhen="ios">Cancel</span>
-                <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+                <ion-icon color="theme" name="md-close" showWhen="android,windows"></ion-icon>
             </button>
         </ion-buttons>
         <ion-title text-center>Login</ion-title>
@@ -20,7 +20,7 @@
                 <ion-label class='label' floating>Password</ion-label>
                 <ion-input type="email" formControlName="subjectName"></ion-input>
             </ion-item>
-            <button type="submit" class="footerBtn right submit" ion-button icon-right full block (click)="navToProduct();">
+            <button type="submit" color="theme" class="footerBtn right submit" ion-button icon-right full block (click)="navToProduct();">
                 Login
             </button>
         </ion-list>

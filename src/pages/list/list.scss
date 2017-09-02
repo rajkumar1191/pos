@@ -14,9 +14,22 @@ page-list {
     }
     .col{
         padding: 1px;
+
+    }
+    ion-thumbnail{
+        position: relative
+        
     }
     img {
         padding: 5px;
         border: 1px solid #ccc;
+    }
+    .multi{
+        position: absolute;
+        border: 1px solid #15AF5E;
+        border-radius: 50%;
+        right: -10px;
+        top: 40px;
+        background: #fff;
     }
 }

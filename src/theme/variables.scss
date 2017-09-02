@@ -38,10 +38,13 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  theme:      #5C6AC4
 );
 
-
+$text-input-highlight-color-valid : #5C6AC4;
+$text-input-md-show-focus-highlight : #5C6AC4;
+$text-input-md-highlight-color : #5C6AC4;
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here

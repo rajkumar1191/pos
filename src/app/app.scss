@@ -33,3 +33,16 @@
 .side-menu-list .item.item-block:last-child {
     border-bottom: none;
 }
+.sideMenu{
+    height: 50%;
+    min-height: 200px;
+    position: relative;
+    .icon{
+        font-size: 8.8rem;
+        padding-left: 10px;
+    }
+    h3,h5{
+        padding-left: 10px;
+        color:#fff
+    }
+}
